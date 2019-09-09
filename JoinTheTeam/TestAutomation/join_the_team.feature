@@ -1,5 +1,5 @@
 Feature: Join The Team Page
-  As Capture QA I need to have confidence the Cloud UI works.
+  As QA I need to have confidence that the Join The Team Page elements work.
 
   @filtered_search
   Scenario: Filtered Search
