@@ -6,11 +6,9 @@
 
 As QA Engineer you have two stories to test:
 
-Go to  <https://myhealthbridge.com>
-
-Join the Team : Story 1
-
-Leadership : Story 2
+* Go to  <https://myhealthbridge.com>
+* Join the Team : Story 1
+* Leadership : Story 2
 
 ### Join the Team
 
