@@ -1,17 +1,14 @@
 # HealthBridgeDemo
 
-This is not a repository for the general public.  This is for a job interview and will be removed shortly.
+**WIP** This is not a repository for the general public.  This is for a job interview and will be removed shortly.
 
-## Audition Premise
+## Details
 
-**WIP**
 As QA Engineer you have two stories to test:
 Go to  <https://myhealthbridge.com>
 
 Join the Team : Story 1
 Leadership : Story 2
-
-## Details
 
 ### Join the Team
 
