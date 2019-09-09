@@ -16,4 +16,3 @@ Feature: Join The Team Page
      And I navigate to the page
     When I click the read more button
     Then I see that a new page opened with the correct article
-    
