@@ -1,10 +1,18 @@
-# Comment
-@tag
-Feature: Eating too many cucumbers may not be good for you
+Feature: Join The Team Page
+  As QA I need to have confidence that the Join The Team Page elements work.
 
-  Eating too much of anything may not be good for you.
+  @filtered_search
+  Scenario: Filtered Search
+   Given I open a new browser window
+     And I navigate to the page
+    When I input text into the search field
+     And I use the pulldown menu
+     And I click the Submit button
+    Then I see the filtered results
 
-  Scenario: Eating a few is no problem
-    Given Alice is hungry 
-    When she eats 3 cucumbers
-    Then she will be full
+  @read_more
+  Scenario: Click the Read More button
+   Given I open a new browser window
+     And I navigate to the page
+    When I click the read more button
+    Then I see that a new page opened with the correct article
