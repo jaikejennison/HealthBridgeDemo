@@ -21,5 +21,5 @@ As QA Engineer you have two stories to test:
 
 ### Leadership
 
-* Come up with test cases [Quick Link](#fragment) **WIP**
-* Come up solution how would we compare the images if you have to test automate the story [Quick Link](#fragment) **WIP**
+* Come up with test cases [Quick Link](https://github.com/jaikejennison/HealthBridgeDemo/tree/master/Leadership)
+* Come up solution how would we compare the images if you have to test automate the story [Quick Link](https://github.com/jaikejennison/HealthBridgeDemo/tree/master/Leadership)
