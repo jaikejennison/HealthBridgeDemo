@@ -32,7 +32,7 @@ Zero `et_pb_column_empty` div classes
 
 ### Actual Result
 
-> Zero `et_pb_column_empty` div classes
+`>` Zero `et_pb_column_empty` div classes
 
 ### Pass/Fail
 
