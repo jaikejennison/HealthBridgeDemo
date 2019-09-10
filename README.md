@@ -14,7 +14,7 @@ As QA Engineer you have two stories to test:
 
 1. Come up with test strategy [Quick Link](https://github.com/jaikejennison/HealthBridgeDemo/tree/master/JoinTheTeam/TestStrategy)
 2. Create manual test cases [Quick Link](https://github.com/jaikejennison/HealthBridgeDemo/tree/master/JoinTheTeam/TestStrategy)
-3. Test Automation [Quick Link](https://github.com/jaikejennison/HealthBridgeDemo/tree/jaikejennison-patch-1/JoinTheTeam/TestAutomation)
+3. Test Automation [Quick Link](https://github.com/jaikejennison/HealthBridgeDemo/tree/master/JoinTheTeam/TestAutomation)
     * Create UI test automation framework
     * Use any tool preferably selenium come up with 3-4 runnable tests to demo
 4. Two performance related test cases [Quick Link](#fragment) **WIP**
