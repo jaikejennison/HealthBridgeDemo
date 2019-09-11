@@ -15,8 +15,8 @@ class Common
     end
 
     def self.read_more
-        # click = WebDriver.browser.button(:class 'btn', :title 'Read More').click
-        click = WebDriver.browser.link(:class 'btn', :title 'Read More').click
+        # click = WebDriver.browser.button(:class => 'btn', :title => 'Read More').click
+        click = WebDriver.browser.link(:class => 'btn', :title => 'Read More').click
         return click.click if click.exists?
     end
     
