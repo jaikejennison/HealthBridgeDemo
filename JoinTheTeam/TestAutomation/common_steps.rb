@@ -3,7 +3,7 @@ Bundler.require(:default)
 
 Before do
     if Config.page.nil?
-        config.setup_page
+        Config.setup_page
     end
 end
 
