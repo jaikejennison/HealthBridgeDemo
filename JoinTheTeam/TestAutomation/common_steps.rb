@@ -60,24 +60,28 @@ end
 
 Then /^I see the correct filtered list$/ do
     if @search == true
+        pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     end
     if @category_filter == true
+        pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     end
     if @job_type_filter == true
+        pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     end
     if @location_filter == true
+        pending
         #code
         # result = WebDriver something
         # expect(result).to be true
@@ -95,8 +99,9 @@ When /^I click the read more button$/ do
 end
 
 Then /^I am directed to the correct new page$/ do
-    #code
     puts @title
+    pending
+    #code
     # result = WebDriver something
     # expect(result).to be true
     # expect(result).to be result
