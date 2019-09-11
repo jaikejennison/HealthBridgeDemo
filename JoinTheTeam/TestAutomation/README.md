@@ -1,5 +1,7 @@
 # TestAutomation
 
+![alt text](https://github.com/jaikejennison/HealthBridgeDemo/edit/master/JoinTheTeam/TestAutomation/logo.gif "Who tests the tester?")
+
 ## Quick Start
 
 ```bash
