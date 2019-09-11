@@ -60,35 +60,35 @@ end
 
 Then /^I see the correct filtered list$/ do
     if @search == true
-        pending
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     end
     if @category_filter == true
-        pending
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     end
     if @job_type_filter == true
-        pending
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     end
     if @location_filter == true
-        pending
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     end
     if @search_and_filter == true
-        pending
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
