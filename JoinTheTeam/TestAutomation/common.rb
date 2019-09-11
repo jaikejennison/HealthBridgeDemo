@@ -10,13 +10,15 @@ class Common
         filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, 'https://myhealthbridge.com/join-the-team/')]")
         text_field = filters_form.text_field(:name, 'search_keywords')
         text_field.set(text)
-        filters_form.select_list(:id, list).select(value)
+        if !list.nil? && !value.nil?
+            filters_form.select_list(:id, list).select(value)
+        end
         filters_form.submit
     end
 
     def self.read_more
-        # click = WebDriver.browser.button(:class => 'btn', :title => 'Read More').click
-        click = WebDriver.browser.link(:class => 'btn', :title => 'Read More').click
+        # click = WebDriver.browser.button(:class 'btn', :title 'Read More').click
+        click = WebDriver.browser.link(:class 'btn', :title 'Read More').click
         return click.click if click.exists?
     end
     
