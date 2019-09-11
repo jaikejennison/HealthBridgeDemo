@@ -1,4 +1,4 @@
 # cucumber.yml
 ##YAML Template
 
-join_the_team: features/join_the_team.feature -r common_steps.rb -r common.rb -r config.rb -csf pretty
+join_the_team: features/join_the_team.feature -r common_steps.rb -r common.rb -r config.rb -r webdriver.rb -csf pretty
