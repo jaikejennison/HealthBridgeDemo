@@ -86,7 +86,7 @@ Then /^I see the correct filtered list$/ do
 end
 
 When /^I click the read more button$/ do
-    @title = WebDriver.browser.span(:class 'job-title').text
+    @title = WebDriver.browser.span(:class => 'job-title').text
     Common.read_more
 end
 
