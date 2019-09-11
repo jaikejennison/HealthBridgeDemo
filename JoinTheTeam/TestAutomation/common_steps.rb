@@ -87,6 +87,13 @@ Then /^I see the correct filtered list$/ do
         # expect(result).to be true
         # expect(result).to be result
     end
+    if @search_and_filter == true
+        pending
+        #code
+        # result = WebDriver something
+        # expect(result).to be true
+        # expect(result).to be result
+    end
 end
 
 When /^I click the read more button$/ do
