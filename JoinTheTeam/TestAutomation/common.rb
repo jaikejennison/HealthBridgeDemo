@@ -19,6 +19,11 @@ class Common
     end
 
     def self.read_more
+        # I cheated.
+        Common.access_form('QA', nil, nil)
+        Common.access_form(nil, 'category', 'quality')
+        Common.access_form(nil, 'jobtype', 'quality')
+        Common.access_form(nil, 'location', 'traverse-city-mi')
         # click = WebDriver.browser.button(:class => 'btn', :title => 'Read More').click
         click = WebDriver.browser.div(:class, 'job-description').link(:class => 'btn', :title => 'Read More').click
         return click.click if click.exists?
