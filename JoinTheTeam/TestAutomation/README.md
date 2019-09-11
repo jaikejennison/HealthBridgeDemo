@@ -8,6 +8,7 @@
 bundle install
 cucumber -p join_the_team
 ```
+
 ### Headless
 
 ```bash
