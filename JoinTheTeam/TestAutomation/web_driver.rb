@@ -14,8 +14,9 @@ class WebDriver
       if prefs
         @browser = Watir::Browser.new browser, :prefs => prefs
       elsif browser == :firefox
-        profile = Selenium::WebDriver::Firefox::Profile.from_name 'automation'
-        @browser = Watir::Browser.new(:firefox, :profile => profile)
+        # profile = Selenium::WebDriver::Firefox::Profile.from_name 'automation'
+        # @browser = Watir::Browser.new(:firefox, :profile => profile)
+        @browser = Watir::Browser.new(:firefox)
       else
         @browser = Watir::Browser.new browser
         @browser.window.wait_until_present
