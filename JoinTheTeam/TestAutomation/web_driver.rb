@@ -24,13 +24,15 @@ class WebDriver
         @browser_version = capabilities.version
         puts "Using Browser: #{capabilities.browser_name.capitalize} v#{@browser_version}"
       end
-    rescue Net::ReadTimeout
-      puts 'Detected Net::ReadTimeout Error, Restarting Browser Session'
+    rescue StandardError => e # Net::ReadTimeout
+      # puts 'Detected Net::ReadTimeout Error, Restarting Browser Session'
+      puts "Detected #{e} Error, Restarting Browser Session"
       WebDriver.close
       sleep 5
       @read_timeouts += 1
       retry unless @read_timeouts > 2
-      abort('Maximum Number of Net::ReadTimeout Errors Detected, Aborting')
+      # abort('Maximum Number of Net::ReadTimeout Errors Detected, Aborting')
+      abort("Maximum Number of #{e} Errors Detected, Aborting")
     end
   end
 
