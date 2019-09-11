@@ -3,7 +3,7 @@ Bundler.require(:default)
 
 Before do
     if Config.page.nil?
-        Config.setup_page('end_points')
+        config.setup_page
     end
 end
 
@@ -86,12 +86,17 @@ Then /^I see the correct filtered list$/ do
 end
 
 When /^I click the read more button$/ do
-    @title = WebDriver.browser.span(:class => 'job-title').text
+    Common.access_form('Engineer', nil, nil)
+    Common.access_form(nil, 'category', 'quality')
+    Common.access_form(nil, 'jobtype', 'quality')
+    Common.access_form(nil, 'location', 'traverse-city-mi')
+    @title = WebDriver.browser.span(:class 'job-title').text
     Common.read_more
 end
 
 Then /^I am directed to the correct new page$/ do
     #code
+    puts @title
     # result = WebDriver something
     # expect(result).to be true
     # expect(result).to be result
