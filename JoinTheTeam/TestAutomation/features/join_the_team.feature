@@ -39,7 +39,7 @@ Feature: Join The Team Page
 
   @read_more
   Scenario: Click the Read More button
-   Given I open a new browser window
+   Given I open a new chrome browser window
      And I navigate to the Join The Team page
     When I click the read more button
     Then I am directed to the correct new page
