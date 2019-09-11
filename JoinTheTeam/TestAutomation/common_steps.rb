@@ -90,7 +90,7 @@ When /^I click the read more button$/ do
     Common.access_form(nil, 'category', 'quality')
     Common.access_form(nil, 'jobtype', 'quality')
     Common.access_form(nil, 'location', 'traverse-city-mi')
-    @title = WebDriver.browser.span(:class 'job-title').text
+    @title = WebDriver.browser.span(:class, 'job-title').text
     Common.read_more
 end
 
