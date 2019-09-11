@@ -10,7 +10,7 @@ class Common
         filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, 'https://myhealthbridge.com/join-the-team/')]")
         text_field = filters_form.text_field(:name, 'search_keywords')
         text_field.set(text)
-        filters_form.select_list(:id, list).select_value(value)
+        filters_form.select_list(:id, list).select(value)
         filters_form.submit
     end
 
