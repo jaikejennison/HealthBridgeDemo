@@ -1,3 +1,4 @@
+require 'headless'
 require 'watir'
 
 # This class defines a custom web driver.
