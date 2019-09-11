@@ -50,7 +50,7 @@ When /^I check the (.*) elements?$/ do |element|
         Common.access_form(nil, 'location', 'traverse-city-mi')
         @location_filter = true
     when 'search and filter'
-        Common.access_form('QA', nil, nil)
+        Common.access_form('Engineer', nil, nil)
         Common.access_form(nil, 'category', 'quality')
         Common.access_form(nil, 'jobtype', 'quality')
         Common.access_form(nil, 'location', 'traverse-city-mi')
