@@ -22,11 +22,11 @@ end
 And /^I navigate to the (.*) page$/ do |page|
     case page
     when 'Home'
-        Common.access_page(Config.page[home_uri])
+        Common.access_page(Config.page[:home_uri])
     when 'Join The Team'
-        Common.access_page(Config.page[join_the_team_uri])
+        Common.access_page(Config.page[:join_the_team_uri])
     when 'Leadership'
-        Common.access_page(Config.page[leadership_uri])
+        Common.access_page(Config.page[:leadership_uri])
     end
 end
 
