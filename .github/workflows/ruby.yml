@@ -17,6 +17,9 @@ jobs:
       run: |
         pwd
         cd JoinTheTeam/TestAutomation
+        pwd
         gem install bundler
+        gem install rake
         bundle install --jobs 4 --retry 3
         bundle exec rake
+        cucumber -p cucumber.yml
