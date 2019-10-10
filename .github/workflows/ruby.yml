@@ -20,4 +20,4 @@ jobs:
         pwd
         gem install bundler
         bundle install --jobs 4 --retry 3
-        cucumber -p cucumber.yml
+        cucumber -p join_the_team
