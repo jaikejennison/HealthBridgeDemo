@@ -13,13 +13,11 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: 2.6.x
-    - name: Build and test with Rake
+    - name: Build and test with Cucumber
       run: |
         pwd
         cd JoinTheTeam/TestAutomation
         pwd
         gem install bundler
-        gem install rake
         bundle install --jobs 4 --retry 3
-        bundle exec rake
         cucumber -p cucumber.yml
