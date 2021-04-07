@@ -12,11 +12,11 @@ class WebDriver
         @headless.start
       end
       @browser = Watir::Browser.new browser
-      @browser.window.wait_until_present
-      @browser.window.maximize
-      #capabilities = @browser.driver.capabilities
-      #@browser_version = capabilities.version
-      #puts "Using Browser: #{capabilities.browser_name.capitalize} v#{@browser_version}"
+      #@browser.window.wait_until_present
+      #@browser.window.maximize
+      capabilities = @browser.driver.capabilities
+      @browser_version = capabilities.version
+      puts "Using Browser: #{capabilities.browser_name.capitalize} v#{@browser_version}"
       #
       #if browser == :firefox
       #  @browser = Watir::Browser.new browser
