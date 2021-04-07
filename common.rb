@@ -7,9 +7,9 @@ class Common
     end
 
     def self.access_form(text, list, value)
-        filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, 'https://myhealthbridge.com/join-the-team/')]")
+        filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{Config.page[:home_url]})]")
         if !text.nil?
-            text_field = filters_form.text_field(:name, 'search_keywords')
+            text_field = filters_form.text_field(:name, 'search')
             text_field.set(text)
         end
         if !list.nil? && !value.nil?

@@ -1,4 +1,4 @@
 # cucumber.yml
 ##YAML Template
 
-join_the_team: features/demo.feature -r common_steps.rb -r common.rb -r config.rb -r web_driver.rb -csf pretty
+join_the_team: features/demo.feature -r common_steps.rb -r common.rb -r config/config.rb -r web_driver.rb -csf pretty
