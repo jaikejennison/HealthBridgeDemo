@@ -24,15 +24,15 @@ class Common
         return click.click if click.exists?
     end
 
-    def self.click_button(c_value, t_value)
-        click = WebDriver.browser.button(:class => c_value, :type => t_value)
+    def self.click_button(t_value, c_value)
+        click = WebDriver.browser.button(:type => t_value, :class => c_value)
         #click = WebDriver.browser.span(:class, value)
         return click.click if click.exists?
     end
 
     def self.search(text)
         if !text.nil?
-            WebDriver.browser.text_field(:type => 'search', :class => 'hs-input').set(text)
+            WebDriver.browser.text_field(:type => 'search', :class => 'hs-input act21-search__input').set(text)
         end
     end
 
