@@ -32,7 +32,7 @@ class Common
 
     def self.search(text)
         if !text.nil?
-            WebDriver.browser.text_field(:type => 'search', :class => 'hs-input act21-search__input').set(text)
+            WebDriver.browser.text_field(:type => 'search', :class => %w(hs-input act21-search__input)).set(text)
         end
     end
 
