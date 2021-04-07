@@ -1,6 +1,10 @@
 # Interview Demo
 
-**A L E R T** This is not a repository for the general public.  This is more for a job interview.
+**. : : A L E R T : : .**
+
+This is not a repository for the general public.
+
+This is more for a job interview.
 
 ## TestAutomation
 
