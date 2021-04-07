@@ -41,15 +41,10 @@ class WebDriver
 
   def self.close
     if defined? @headless
-      puts "DEBUG::@headless.distroy"
       @headless.destroy
     else
-      puts "DEBUG::@browser.close"
       @browser.close
     end
-    #if defined? @browser
-    #  @browser.close
-    #end
   end
 
 end
