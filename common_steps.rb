@@ -37,7 +37,7 @@ When /^I click the (.*) button$/ do |button|
     end
 end
 
-When(/^I search for (.*))$/) do |keyword|
+When(/^I search for (.*)$/) do |keyword|
     case keyword
     when 'help'
         pending
