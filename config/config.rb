@@ -9,11 +9,11 @@ class Config
 
     def self.setup_page(page)
         pages = Array.new
-        Dir.glob("#{page}.yml") do |config|
+        Dir.glob("config/#{page}.yml") do |config|
             pages.push(File.basename(config, File.extname(config)))
         end
         if pages.include? page
-            yaml = YAML.load(File.read("#{page}.yml"))
+            yaml = YAML.load(File.read("config/#{page}.yml"))
             @page = Hash.new
             @page[:domain] = yaml['domain']
             @page[:contact] = yaml['contact']
