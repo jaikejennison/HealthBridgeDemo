@@ -4,9 +4,9 @@
 
 This is not a repository for the general public. This is more for a job interview.
 
-## Quick Start
-
 ![alt text](https://github.com/jaikejennison/HealthBridgeDemo/blob/master/logo.gif "Who tests the tester?")
+
+## Quick Start
 
 ```bash
 bundle install
