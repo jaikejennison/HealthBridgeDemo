@@ -16,8 +16,6 @@ jobs:
     - name: Build and test with Cucumber
       run: |
         pwd
-        cd JoinTheTeam/TestAutomation
-        pwd
         gem install bundler
         bundle install --jobs 4 --retry 3
-        cucumber -p join_the_team
+        cucumber -p demo
