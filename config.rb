@@ -15,10 +15,12 @@ class Config
         if pages.include? page
             yaml = YAML.load(File.read("config/#{page}.yml"))
             @page = Hash.new
-            @page[:main_uri] = yaml['mainURI']
-            @page[:home_uri] = "#{@page[:main_uri]}/home"
-            @page[:join_the_team_uri] = "#{@page[:main_uri]}/join-the-team"
-            @page[:leadership_uri] = "#{@page[:main_uri]}/meet-the-team"
+            @page[:domain] = yaml['domain']
+            @page[:contact] = yaml['contact']
+            @page[:workplace] = yaml['workplace']
+            @page[:home_url] = "https://#{@page[:domain]}"
+            @page[:contact_page] = "#{@page[:home_url]}/#{@page[:contact]}"
+            @page[:workplace_page] = "#{@page[:home_url]}/#{@page[:workplace]}"
         else
             abort('Please specify a valid yml prefix')  
         end

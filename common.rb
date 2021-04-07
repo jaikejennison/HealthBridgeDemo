@@ -3,7 +3,7 @@ class Common
 
     def self.access_page(uri)
         WebDriver.browser.goto(uri)
-        WebDriver.browser.div(:class, 'sjb-page').wait_until_present
+        WebDriver.browser.div(:class, 'row-fluid-wrapper').wait_until_present
     end
 
     def self.access_form(text, list, value)
