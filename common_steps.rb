@@ -7,7 +7,7 @@ Before do
     end
 end
 
-Given /^I open a new (.*) browser window$/ do |browser|
+Given(/^I open a new (.*) browser window$/) do |browser|
     case browser
     when 'chrome'
         WebDriver.init(:chrome)
@@ -19,7 +19,7 @@ Given /^I open a new (.*) browser window$/ do |browser|
     end
 end
 
-When /^I click the (.*) button$/ do |button|
+When(/^I click the (.*) button$/) do |button|
     puts button
     case button
     when 'search'
@@ -54,7 +54,7 @@ When(/^I search for (.*)$/) do |keyword|
     end
   end
 
-Then /^I see the (.*) element$/ do |element|
+Then(/^I see the (.*) element$/) do |element|
     puts element
     case element
     when 'search'
@@ -72,7 +72,7 @@ Then /^I see the (.*) element$/ do |element|
     end
 end
 
-And /^I navigate to the (.*) page$/ do |page|
+And(/^I navigate to the (.*) page$/) do |page|
     case page
     when 'Home'
         Common.access_page(Config.page[:home_url])
@@ -83,7 +83,7 @@ And /^I navigate to the (.*) page$/ do |page|
     end
 end
 
-Then /^I see the correct (.*)$/ do |expect|
+Then(/^I see the correct (.*)$/) do |expect|
     puts expect
     case expect
     when 'page'
