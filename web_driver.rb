@@ -4,17 +4,15 @@ require 'watir'
 # This class defines a custom web driver.
 class WebDriver
 
-  def self.init(browser, prefs = nil)
+  def self.init(browser)
     @read_timeouts = 0
     begin
       if ENV['HEADLESS']
         @headless = Headless.new
         @headless.start
       end
-      if prefs
-        @browser = Watir::Browser.new browser, :prefs => prefs
-      elsif browser == :firefox
-        @browser = Watir::Browser.new(:firefox)
+      if browser == :firefox
+        @browser = Watir::Browser.new browser
       else
         @browser = Watir::Browser.new browser
         @browser.window.wait_until_present
