@@ -18,7 +18,7 @@ class Config
             @page[:domain] = yaml['domain']
             @page[:contact] = yaml['contact']
             @page[:workplace] = yaml['workplace']
-            @page[:home_url] = "https://#{@page[:domain]}"
+            @page[:home_url] = "https://#{@page[:domain]}.com"
             @page[:contact_page] = "#{@page[:home_url]}/#{@page[:contact]}"
             @page[:workplace_page] = "#{@page[:home_url]}/#{@page[:workplace]}"
         else
