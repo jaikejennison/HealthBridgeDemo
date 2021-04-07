@@ -22,7 +22,7 @@ class Config
             @page[:contact_page] = "#{@page[:home_url]}/#{@page[:contact]}"
             @page[:workplace_page] = "#{@page[:home_url]}/#{@page[:workplace]}"
         else
-            abort('Please specify a valid yml prefix')  
+            abort('Please specify a valid yml prefix')
         end
     end
 

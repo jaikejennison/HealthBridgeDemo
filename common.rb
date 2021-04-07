@@ -18,10 +18,22 @@ class Common
         filters_form.submit
     end
 
-    def self.read_more
-        # click = WebDriver.browser.button(:class => 'btn', :title => 'Read More')
-        click = WebDriver.browser.div(:class, 'job-description').link(:class => 'btn', :title => 'Read More')
+    def self.click_span(value)
+        # click = WebDriver.browser.button(:class => 'btn', :title => 'search')
+        click = WebDriver.browser.span(:class, value)
         return click.click if click.exists?
+    end
+
+    def self.click_button(c_value, t_value)
+        click = WebDriver.browser.button(:class => c_value, :type => t_value)
+        #click = WebDriver.browser.span(:class, value)
+        return click.click if click.exists?
+    end
+
+    def self.search(text)
+        if !text.nil?
+            WebDriver.browser.text_field(:type => 'search', :class => 'hs-input').set(text)
+        end
     end
 
 end

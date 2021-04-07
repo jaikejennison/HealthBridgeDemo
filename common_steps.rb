@@ -20,11 +20,10 @@ Given(/^I open a new (.*) browser window$/) do |browser|
 end
 
 When(/^I click the (.*) button$/) do |button|
-    puts button
     case button
     when 'search'
-        pending
-        #code
+       Common.click_span(button)
+       #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
@@ -40,7 +39,7 @@ end
 When(/^I search for (.*)$/) do |keyword|
     case keyword
     when 'help'
-        pending
+        Common.search(keyword)
         #code
         # result = WebDriver something
         # expect(result).to be true
@@ -55,10 +54,10 @@ When(/^I search for (.*)$/) do |keyword|
   end
 
 Then(/^I see the (.*) element$/) do |element|
-    puts element
     case element
     when 'search'
-        pending
+        puts 'Magic'
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
@@ -84,16 +83,16 @@ And(/^I navigate to the (.*) page$/) do |page|
 end
 
 Then(/^I see the correct (.*)$/) do |expect|
-    puts expect
+    puts "#{expect} magic"
     case expect
     when 'page'
-        pending
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
     when 'results'
-        pending
+        #pending
         #code
         # result = WebDriver something
         # expect(result).to be true
