@@ -19,17 +19,6 @@ Given /^I open a new (.*) browser window$/ do |browser|
     end
 end
 
-And /^I navigate to the (.*) page$/ do |page|
-    case page
-    when 'Home'
-        Common.access_page(Config.page[:home_url])
-    when 'Contact'
-        Common.access_page(Config.page[:contact_page])
-    when 'Workplace'
-        Common.access_page(Config.page[:workplace_page])
-    end
-end
-
 When /^I click the (.*) button$/ do |button|
     puts button
     case button
@@ -48,6 +37,23 @@ When /^I click the (.*) button$/ do |button|
     end
 end
 
+When(/^I search for (.*))$/) do |keyword|
+    case keyword
+    when 'help'
+        pending
+        #code
+        # result = WebDriver something
+        # expect(result).to be true
+        # expect(result).to be result
+    when 'slack'
+        pending
+        #code
+        # result = WebDriver something
+        # expect(result).to be true
+        # expect(result).to be result
+    end
+  end
+
 Then /^I see the (.*) element$/ do |element|
     puts element
     case element
@@ -63,6 +69,17 @@ Then /^I see the (.*) element$/ do |element|
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result
+    end
+end
+
+And /^I navigate to the (.*) page$/ do |page|
+    case page
+    when 'Home'
+        Common.access_page(Config.page[:home_url])
+    when 'Contact'
+        Common.access_page(Config.page[:contact_page])
+    when 'Workplace'
+        Common.access_page(Config.page[:workplace_page])
     end
 end
 
