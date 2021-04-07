@@ -10,22 +10,22 @@ This is not a repository for the general public. This is more for a job intervie
 
 ```bash
 bundle install
-cucumber -p interview_demo
+cucumber -p demo
 ```
 
 #### Headless
 
 ```bash
 bundle install
-cucumber HEADLESS=true -p interview_demo
+cucumber HEADLESS=true -p demo
 ```
 
 #### Tags
 
 * Browser tags `@chrome|@firefox`
-* Scenario tags `@search|@categoty_filter|@job_type_filter|@location_filter|@search_and_filter`
+* Scenario tags `@search|@landing_page|@contact_page|@workplace_page`
 
 ```bash
 bundle install
-cucumber -p interview_demo -t @tag1 @tag2 ...
+cucumber -p demo -t @tag1 @tag2 ...
 ```
