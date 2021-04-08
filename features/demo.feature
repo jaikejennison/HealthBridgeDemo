@@ -5,19 +5,19 @@ Feature: Interview Demo
 @chrome @landing_page
   Scenario: Landing Page
    Given I open a new chrome browser window
-    When I navigate to the Home page
+    When I navigate to the home page
     Then I see the correct page
 
 @chrome @contact_page
   Scenario: Contact Page
    Given I open a new chrome browser window
-    When I navigate to the Contact page
+    When I navigate to the contact page
     Then I see the correct page
 
 @chrome @workplace_page
   Scenario: Workplace Page
    Given I open a new chrome browser window
-    When I navigate to the Workplace page
+    When I navigate to the workplace page
     Then I see the correct page
 
 @chrome @search
@@ -32,19 +32,19 @@ Feature: Interview Demo
 @firefox @landing_page
   Scenario: Landing Page
    Given I open a new firefox browser window
-    When I navigate to the Home page
+    When I navigate to the home page
     Then I see the correct page
 
 @firefox @contact_page
   Scenario: Contact Page
    Given I open a new firefox browser window
-    When I navigate to the Contact page
+    When I navigate to the contact page
     Then I see the correct page
 
 @firefox @workplace_page
   Scenario: Workplace Page
    Given I open a new firefox browser window
-    When I navigate to the Workplace page
+    When I navigate to the workplace page
     Then I see the correct page
 
 @firefox @search
