@@ -9,9 +9,9 @@ class Common
 
   def self.access_form(id, name, text, value, xpath)
     begin
-      puts "Current URL: #{WebDriver.browser.url}"
-      filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
-      # filters_form_z = WebDriver.browser.form(:action, xpath)
+      puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
+      # filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
+      filters_form = WebDriver.browser.form(:action, xpath)
       # unless text.nil?
       #   text_field = filters_form.text_field(:name, name)
       #   text_field.set(text)
