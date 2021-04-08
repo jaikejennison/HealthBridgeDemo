@@ -47,13 +47,17 @@ Then(/^I see the (.*) element$/) do |element|
 end
 
 And(/^I navigate to the (.*) page$/) do |page|
+  domain = Config.page[:domain]
+  contact = Config.page[:contact]
+  workplace = Config.page[:workplace]
+  puts "DEBUG:: domain:#{domain} contact:#{contact} workplace:#{workplace}"
   case page
   when 'Home'
-    Common.access_page(Config.page[:home_url])
+    Common.access_page(domain)
   when 'Contact'
-    Common.access_page(Config.page[:contact_page])
+    Common.access_page("#{domain}/#{contact}")
   when 'Workplace'
-    Common.access_page(Config.page[:workplace_page])
+    Common.access_page("#{domain}/#{workplace}")
   end
 end
 
