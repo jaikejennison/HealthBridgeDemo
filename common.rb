@@ -7,7 +7,7 @@ class Common
     end
 
     def self.access_form(id, name, text, value, xpath)
-        filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
+        filters_form = WebDriver.browser.form(:xpath, "//form[includes(@action, #{xpath})]")
         if !text.nil?
             text_field = filters_form.text_field(:name, name)
             text_field.set(text)
@@ -16,18 +16,6 @@ class Common
             filters_form.select_list(:id, id).select(value)
         end
         filters_form.submit
-    end
-
-    def self.click_span(value)
-        # click = WebDriver.browser.button(:class => 'btn', :title => 'search')
-        click = WebDriver.browser.span(:class, value)
-        return click.click if click.exists?
-    end
-
-    def self.click_button(t_value, c_value)
-        click = WebDriver.browser.button(:type => t_value, :class => c_value)
-        #click = WebDriver.browser.span(:class, value)
-        return click.click if click.exists?
     end
 
     def self.click_element(tag, value)
