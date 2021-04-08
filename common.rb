@@ -14,7 +14,7 @@ class Common
 
   def self.access_form(id, name, text, value, xpath)
     begin
-      puts "DEBUG::LOG::Common.access_form\nURL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
+      puts "DEBUG::LOG::Common.access_form\nURL: #{WebDriver.browser.url}"
       form = WebDriver.browser.div(:class, 'cell-wrapper').form(:xpath, "//form[starts-with(@action, #{xpath})]")
       # form = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
       unless text.nil?
