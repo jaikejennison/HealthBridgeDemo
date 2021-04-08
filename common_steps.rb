@@ -23,7 +23,7 @@ And(/^I navigate to the (.*) page$/) do |page|
   domain = Config.page[:domain]
   contact = Config.page[:contact]
   workplace = Config.page[:workplace]
-  puts "DEBUG::\n\tdomain:#{domain}\n\tcontact:#{contact}\n\tworkplace:#{workplace}"
+  puts "DEBUG::\n\tdomain: #{domain}\n\tcontact: #{contact}\n\tworkplace: #{workplace}"
   case page
   when 'home'
     Common.access_page(domain)
@@ -76,5 +76,8 @@ Then(/^I see the correct (.*)$/) do |expect|
 end
 
 After do
+  screen_shot = WebDriver.browser.screenshot.save 'screenshot.png'
+  embed 'screenshot.png', 'image/png'
+  puts "DEBUG::\n\tscreen_shot_base64: #{screen_shot.base64}"
   WebDriver.close
 end
