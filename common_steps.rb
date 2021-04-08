@@ -39,7 +39,8 @@ end
 When(/^I search for (.*)$/) do |keyword|
     case keyword
     when 'help'
-        Common.search(keyword)
+        #Common.search(keyword)
+        Common.access_form(nil, 'term', keyword, nil, '/hs-search-results')
         #code
         # result = WebDriver something
         # expect(result).to be true

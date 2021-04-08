@@ -6,14 +6,14 @@ class Common
         WebDriver.browser.div(:class, 'row-fluid-wrapper').wait_until_present
     end
 
-    def self.access_form(text, list, value)
-        filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{Config.page[:home_url]})]")
+    def self.access_form(id, name, text, value, xpath)
+        filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
         if !text.nil?
-            text_field = filters_form.text_field(:name, 'search')
+            text_field = filters_form.text_field(:name, name)
             text_field.set(text)
         end
-        if !list.nil? && !value.nil?
-            filters_form.select_list(:id, list).select(value)
+        if !id.nil? && !value.nil?
+            filters_form.select_list(:id, id).select(value)
         end
         filters_form.submit
     end
