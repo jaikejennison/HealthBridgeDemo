@@ -23,7 +23,7 @@ Feature: Interview Demo
 @chrome @search
   Scenario: Search element
    Given I open a new chrome browser window
-     And I navigate to the landing page
+     And I navigate to the home page
     When I click the search element
     Then I see the search element
     When I search for help
@@ -50,7 +50,7 @@ Feature: Interview Demo
 @firefox @search
   Scenario: Search element
    Given I open a new firefox browser window
-     And I navigate to the landing page
+     And I navigate to the home page
     When I click the search element
     Then I see the search element
     When I search for help
