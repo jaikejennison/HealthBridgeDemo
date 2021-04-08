@@ -5,12 +5,12 @@ class Common
   def self.access_page(uri)
     WebDriver.browser.goto(uri)
     WebDriver.browser.div(:class, 'row-fluid-wrapper').wait_until_present
-    puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}"
+    puts "DEBUG::Common.access_page\nURL: #{WebDriver.browser.url}"
   end
 
   def self.access_form(id, name, text, value, xpath)
     begin
-      puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
+      puts "DEBUG::Common.access_form\nURL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
       form = WebDriver.browser.div(:class, 'cell-wrapper').form(:xpath, "//form[starts-with(@action, #{xpath})]")
       # form = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
       unless text.nil?
@@ -25,7 +25,7 @@ class Common
   end
 
   def self.click_element(tag, value)
-    puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}"
+    puts "DEBUG::Common.click_element\nURL: #{WebDriver.browser.url}"
     case tag
     when 'span'
       click = WebDriver.browser.span(:class, value)
