@@ -11,14 +11,14 @@ class Common
   def self.access_form(id, name, text, value, xpath)
     begin
       puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
-      # filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
-      filters_form = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
+      form = WebDriver.browser.div(:class, 'cell-wrapper').form(:xpath, "//form[starts-with(@action, #{xpath})]")
+      # form = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
       # unless text.nil?
-      #   text_field = filters_form.text_field(:name, name)
-      #   text_field.set(text)
+      #   field = form.field(:name, name)
+      #   field.set(text)
       # end
-      # filters_form.select_list(:id, id).select(value) unless id.nil? && value.nil?
-      filters_form.submit
+      # form.select_list(:id, id).select(value) unless id.nil? && value.nil?
+      form.submit
     rescue StandardError => e
       puts "\tERROR::#{e}"
     end
