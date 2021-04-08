@@ -3,7 +3,7 @@
 # This class defines end points and objects.
 class Common
   def self.access_page(uri)
-    puts "DEBUG::uri:#{uri}"
+    puts "\tDEBUG::uri:#{uri}"
     WebDriver.browser.goto(uri)
     WebDriver.browser.div(:class, 'row-fluid-wrapper').wait_until_present
   end
