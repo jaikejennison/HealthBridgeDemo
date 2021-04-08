@@ -17,12 +17,12 @@ class WebDriver
       @browser_version = capabilities.version
       puts "Browser: #{capabilities.browser_name.capitalize} v.#{@browser_version}"
     rescue StandardError => e
-      puts "WARN::#{e}... Restarting browser."
+      puts "ERROR::StandardError::WebDriver.init\n#{e}\nRestarting browser..."
       WebDriver.close
       sleep 5
       @read_timeouts += 1
       retry unless @read_timeouts > 2
-      abort("ABRT::#{e}. Maximum retry limit reached... Aborting.")
+      abort("ABRT::StandardError::WebDriver.init\n#{e}.\n\tMaximum retry limit reached... Aborting.")
     end
   end
 
