@@ -19,6 +19,21 @@ Given(/^I open a new (.*) browser window$/) do |browser|
   end
 end
 
+And(/^I navigate to the (.*) page$/) do |page|
+  domain = Config.page[:domain]
+  contact = Config.page[:contact]
+  workplace = Config.page[:workplace]
+  puts "DEBUG::\n\tdomain:#{domain}\n\tcontact:#{contact}\n\tworkplace:#{workplace}"
+  case page
+  when 'home'
+    Common.access_page(domain)
+  when 'contact'
+    Common.access_page("#{domain}/#{contact}")
+  when 'workplace'
+    Common.access_page("#{domain}/#{workplace}")
+  end
+end
+
 When(/^I click the (.*) element$/) do |element|
   case element
   when 'search'
@@ -46,20 +61,7 @@ Then(/^I see the (.*) element$/) do |element|
   end
 end
 
-And(/^I navigate to the (.*) page$/) do |page|
-  domain = Config.page[:domain]
-  contact = Config.page[:contact]
-  workplace = Config.page[:workplace]
-  puts "DEBUG:: domain:#{domain} contact:#{contact} workplace:#{workplace}"
-  case page
-  when 'home'
-    Common.access_page(domain)
-  when 'contact'
-    Common.access_page("#{domain}/#{contact}")
-  when 'workplace'
-    Common.access_page("#{domain}/#{workplace}")
-  end
-end
+
 
 Then(/^I see the correct (.*)$/) do |expect|
   puts "Pending #{expect} magic"
