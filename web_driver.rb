@@ -27,11 +27,11 @@ class WebDriver
   end
 
   def self.browser
-    attr_reader :browser
+    @browser
   end
 
   def self.version
-    attr_reader :browser_version
+    @browser_version
   end
 
   def self.close
