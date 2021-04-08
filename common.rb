@@ -18,7 +18,7 @@ class Common
       element = WebDriver.browser.div(:class, 'cell-wrapper').form(:xpath, "//form[starts-with(@action, #{xpath})]")
       # form = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
       unless text.nil?
-        input = element.text_field(:name, name)
+        input = element.text_field(:type => 'search',:name => name)
         input.set(text)
       end
       element.select_list(:id, id).select(value) unless id.nil? && value.nil?
