@@ -46,7 +46,7 @@ end
 When(/^I search for (.*)$/) do |keyword|
   case keyword
   when 'help'
-    Common.access_form(nil, 'term', keyword, nil, 'search')
+    Common.access_form(nil, 'term', keyword, nil, '/hs-search-results')
   when 'slack'
     pending
   end
