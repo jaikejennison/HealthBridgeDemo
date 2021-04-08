@@ -25,7 +25,7 @@ class Common
     case tag
     when 'span'
       # click = WebDriver.browser.span(:class, value)
-      WebDriver.browser.span(:class, value).click
+      WebDriver.browser.span(:class, value).click!
     when 'button'
       # click = WebDriver.browser.button(:class, value)
       WebDriver.browser.button(:class, value).click
