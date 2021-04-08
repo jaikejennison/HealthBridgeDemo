@@ -5,6 +5,7 @@ class Common
   def self.access_page(uri)
     WebDriver.browser.goto(uri)
     WebDriver.browser.div(:class, 'row-fluid-wrapper').wait_until_present
+    puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
   end
 
   def self.access_form(id, name, text, value, xpath)
@@ -24,6 +25,7 @@ class Common
   end
 
   def self.click_element(tag, value)
+    puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
     case tag
     when 'span'
       click = WebDriver.browser.span(:class, value)
@@ -31,5 +33,6 @@ class Common
       click = WebDriver.browser.button(:class, value)
     end
     return click.click if click.exists?
+    puts "DEBUG::\n\tCurrent URL: #{WebDriver.browser.url}\n\tHTML Dump: #{WebDriver.browser.html}"
   end
 end
