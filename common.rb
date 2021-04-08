@@ -12,10 +12,10 @@ class Common
     puts "DEBUG::LOG::Common.access_form\n\tURL: #{WebDriver.browser.url}"
     element = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
     # element = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
-    unless text.nil?
-      input = element.text_field(type: 'search', name: name)
-      input.set(text)
-    end
+    # unless text.nil?
+    #   input = element.text_field(type: 'search', name: name)
+    #   input.set(text)
+    # end
     element.select_list(:id, id).select(value) unless id.nil? && value.nil?
     element.submit
   end
