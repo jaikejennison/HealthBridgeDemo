@@ -10,7 +10,7 @@ class Common
 
   def self.access_form(id, name, text, value, xpath)
     puts "DEBUG::LOG::Common.access_form\n\tHTML: #{WebDriver.browser.html}"
-    WebDriver.browser.div(:class, 'row-fluid-wrapper').wait_until_present
+    WebDriver.browser.form(:xpath, "/html/body/div[3]/div/div/div/div/div[starts-with(@action, #{xpath})]").wait_until_present
     element = WebDriver.browser.form(:xpath, "/html/body/div[3]/div/div/div/div/div[starts-with(@action, #{xpath})]")
     # element = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
     # unless text.nil?
