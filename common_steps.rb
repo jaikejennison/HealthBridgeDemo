@@ -76,8 +76,8 @@ Then(/^I see the correct (.*)$/) do |expect|
 end
 
 After do
-  WebDriver.browser.screenshot.save 'screenshot.png'
-  embed 'screenshot.png', 'image/png'
-  puts "DEBUG::\n\tscreen_shot_base64: #{WebDriver.browser.screenshot.base64}"
+  # WebDriver.browser.screenshot.save 'screenshot.png'
+  # embed 'screenshot.png', 'image/png'
+  # puts "DEBUG::\n\tbase64: #{WebDriver.browser.screenshot.base64}"
   WebDriver.close
 end
