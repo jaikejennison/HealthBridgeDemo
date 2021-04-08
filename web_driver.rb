@@ -15,14 +15,14 @@ class WebDriver
       @browser = Watir::Browser.new browser
       capabilities = @browser.driver.capabilities
       @browser_version = capabilities.version
-      puts "\tMSG::Browser: #{capabilities.browser_name.capitalize} v.#{@browser_version}"
+      puts "Browser: #{capabilities.browser_name.capitalize} v.#{@browser_version}"
     rescue StandardError => e
-      puts "\tERROR::#{e}. Restarting browser."
+      puts "ERROR::#{e}... Restarting browser."
       WebDriver.close
       sleep 5
       @read_timeouts += 1
       retry unless @read_timeouts > 2
-      abort("\tSIGBRT::#{e}. Maximum retry limit reached. Aborting.")
+      abort("SIGBRT::#{e}. Maximum retry limit reached... Aborting.")
     end
   end
 

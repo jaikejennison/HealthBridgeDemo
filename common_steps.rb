@@ -75,6 +75,6 @@ Then(/^I see the correct (.*)$/) do |expect|
 end
 
 After do
-  puts "\tMSG::\n\t\tbase64: #{WebDriver.browser.screenshot.base64}"
+  #puts "Base64 Image:\n\t#{WebDriver.browser.screenshot.base64}"
   WebDriver.close
 end
