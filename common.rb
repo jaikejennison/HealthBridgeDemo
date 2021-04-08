@@ -3,24 +3,24 @@
 # This class defines end points and objects.
 class Common
   def self.access_page(uri)
-    puts "DEBUG::uri: #{uri}"
+    puts "\tDEBUG::uri: #{uri}"
     WebDriver.browser.goto(uri)
     WebDriver.browser.div(:class, 'row-fluid-wrapper').wait_until_present
   end
 
   def self.access_form(id, name, text, value, xpath)
     begin
-      filters_form = WebDriver.browser.form(:xpath, "//*[starts-with(@action, #{xpath})]")
+      puts "\tDEBUG::Current URL: #{WebDriver.browser.url}"
+      filters_form = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
       filters_form_z = WebDriver.browser.form(:action, xpath)
       unless text.nil?
         text_field = filters_form.text_field(:name, name)
         text_field.set(text)
       end
       filters_form.select_list(:id, id).select(value) unless id.nil? && value.nil?
-      puts "DEBUG::Current URL: #{WebDriver.browser.url}\n\tfilters_form: #{filters_form}\n\tfilters_form_z: #{filters_form_z}\n\ttext_field: #{text_field}"
       filters_form.submit
     rescue StandardError => e
-      puts "ERROR::#{e}"
+      puts "\tERROR::#{e}"
     end
   end
 
