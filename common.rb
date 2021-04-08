@@ -18,12 +18,12 @@ class Common
         filters_form.submit
     end
 
-    def self.click_element(tag, value)
+    def self.click_element(tag, key, value)
         case tag
         when 'span'
-            click = WebDriver.browser.span(:class, value)
+            click = WebDriver.browser.span(":#{key}", value)
         when 'button'
-            click = WebDriver.browser.button(:class, value)
+            click = WebDriver.browser.button(":#{key}", value)
         end
         #click = WebDriver.browser.{tag}(:class, value)
         return click.click if click.exists?

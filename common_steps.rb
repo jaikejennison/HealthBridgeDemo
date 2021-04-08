@@ -19,10 +19,10 @@ Given(/^I open a new (.*) browser window$/) do |browser|
     end
 end
 
-When(/^I click the (.*) button$/) do |button|
-    case button
+When(/^I click the (.*) element$/) do |element|
+    case element
     when 'search'
-        Common.click_element('span', button)
+        Common.click_element('span', element)
     when 'some button'
         pending
     end
@@ -31,7 +31,7 @@ end
 When(/^I search for (.*)$/) do |keyword|
     case keyword
     when 'help'
-        Common.access_form(nil, 'term', keyword, nil, 'hs-search-results')
+        Common.access_form(nil, 'term', keyword, nil, 'search')
     when 'slack'
         pending
     end

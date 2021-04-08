@@ -21,10 +21,10 @@ Feature: Interview Demo
     Then I see the correct page
 
 @chrome @search
-  Scenario: Search Button
+  Scenario: Search element
    Given I open a new chrome browser window
      And I navigate to the landing page
-    When I click the search button
+    When I click the search element
     Then I see the search element
     When I search for help
     Then I see the correct results
@@ -48,10 +48,10 @@ Feature: Interview Demo
     Then I see the correct page
 
 @firefox @search
-  Scenario: Search Button
+  Scenario: Search element
    Given I open a new firefox browser window
      And I navigate to the landing page
-    When I click the search button
+    When I click the search element
     Then I see the search element
     When I search for help
     Then I see the correct results
