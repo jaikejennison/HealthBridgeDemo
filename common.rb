@@ -31,8 +31,13 @@ class Common
     end
 
     def self.click_element(tag, value)
-        click = WebDriver.browser.{tag}(:class, value)
-        #click = WebDriver.browser.span(:class, value)
+        case tag
+        when 'span'
+            click = WebDriver.browser.span(:class, value)
+        when 'button'
+            click = WebDriver.browser.button(:class, value)
+        end
+        #click = WebDriver.browser.{tag}(:class, value)
         return click.click if click.exists?
     end
 
