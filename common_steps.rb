@@ -22,8 +22,11 @@ end
 When(/^I click the (.*) button$/) do |button|
     case button
     when 'search'
-       Common.click_span(button)
-       #code
+        puts "LOG::Common.click_span(button)"
+        Common.click_span(button)
+        puts "LOG::Common.click_element('span', button)"
+        Common.click_element('span', button)
+        #code
         # result = WebDriver something
         # expect(result).to be true
         # expect(result).to be result

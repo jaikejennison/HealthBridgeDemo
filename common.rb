@@ -30,10 +30,10 @@ class Common
         return click.click if click.exists?
     end
 
-    def self.search(text)
-        if !text.nil?
-            WebDriver.browser.text_field(:class, %w(hs-input act21-search__input)).set(text)
-        end
+    def self.click_element(tag, value)
+        click = WebDriver.browser.[tag](:class, value)
+        #click = WebDriver.browser.span(:class, value)
+        return click.click if click.exists?
     end
 
 end
