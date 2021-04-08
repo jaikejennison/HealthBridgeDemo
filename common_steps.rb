@@ -37,7 +37,7 @@ end
 When(/^I click the (.*) element$/) do |element|
   case element
   when 'search'
-    Common.click_element('span', 'class', element)
+    Common.click_element('span', element)
   when 'some button'
     pending
   end
