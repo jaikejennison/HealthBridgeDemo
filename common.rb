@@ -14,7 +14,7 @@ class Common
     # element = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
     unless text.nil?
       input = element.text_field(type: 'search', name: name)
-      # input.set(text)
+      input.set(text)
     end
     element.select_list(:id, id).select(value) unless id.nil? && value.nil?
     element.submit
