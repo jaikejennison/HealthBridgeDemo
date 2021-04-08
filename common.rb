@@ -10,7 +10,7 @@ class Common
 
   def self.access_form(id, name, text, value, xpath)
     puts "DEBUG::LOG::Common.access_form\n\tURL: #{WebDriver.browser.url}"
-    element = WebDriver.browser.form(:xpath, "//form[starts-with(@action, #{xpath})]")
+    element = WebDriver.browser.div(:class, 'cell-wrapper').form(:xpath, "//*[contains(@action, #{xpath})]")
     # element = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
     # unless text.nil?
     #   input = element.text_field(type: 'search', name: name)
@@ -28,7 +28,7 @@ class Common
       WebDriver.browser.span(:class, value).click!
     when 'button'
       # click = WebDriver.browser.button(:class, value)
-      WebDriver.browser.button(:class, value).click
+      WebDriver.browser.button(:class, value).click!
     end
     # return click.click if click.exists?
   end
