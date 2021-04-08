@@ -9,7 +9,7 @@ class Config
   end
 
   def self.setup_page(yml)
-    pages = Array.New
+    pages = Array
     Dir.glob("config/#{yml}.yml") do |config|
       pages.push(File.basename(config, File.extname(config)))
     end
