@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 require 'yaml'
 
 # This class is for initalizing all things related to the website.
 class Config
-
     def self.page
-        @page  
+        @page
     end
 
     def self.setup_page(page)
