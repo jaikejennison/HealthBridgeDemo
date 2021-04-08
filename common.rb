@@ -7,7 +7,7 @@ class Common
     end
 
     def self.access_form(id, name, text, value, xpath)
-        filters_form = WebDriver.browser.form(:xpath, "//form[includes(@action, #{xpath})]")
+        filters_form = WebDriver.browser.form(:xpath, "//form[contains(@action, #{xpath})]")
         if !text.nil?
             text_field = filters_form.text_field(:name, name)
             text_field.set(text)
