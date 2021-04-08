@@ -52,11 +52,11 @@ And(/^I navigate to the (.*) page$/) do |page|
   workplace = Config.page[:workplace]
   puts "DEBUG:: domain:#{domain} contact:#{contact} workplace:#{workplace}"
   case page
-  when 'Home'
+  when 'home'
     Common.access_page(domain)
-  when 'Contact'
+  when 'contact'
     Common.access_page("#{domain}/#{contact}")
-  when 'Workplace'
+  when 'workplace'
     Common.access_page("#{domain}/#{workplace}")
   end
 end
