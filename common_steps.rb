@@ -61,8 +61,6 @@ Then(/^I see the (.*) element$/) do |element|
   end
 end
 
-
-
 Then(/^I see the correct (.*)$/) do |expect|
   puts "Pending #{expect} magic"
   case expect
