@@ -27,7 +27,7 @@ class WebDriver
   end
 
   def self.browser
-    attr_reader :browser
+    attr_writer :browser
   end
 
   def self.version
