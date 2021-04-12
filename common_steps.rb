@@ -34,7 +34,7 @@ When(/^I navigate to the (.*) page$/) do |page|
 end
 
 Then(/^I see the correct (.*) page content$/) do |content|
-  puts "Pending #{content} magic"
+  puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
   Common.check_element(content)
 end
 
