@@ -8,19 +8,6 @@ class Common
     puts "DEBUG::LOG::Common.access_page\n\tURL: #{WebDriver.browser.url}"
   end
 
-  def self.access_form(id, name, text, value, xpath)
-    # puts "DEBUG::LOG::Common.access_form\n\tHTML: #{WebDriver.browser.html}"
-    WebDriver.browser.form(:xpath, "/html/body/div[3]/div/div/div/div/div[starts-with(@action, #{xpath})]").wait_until_present
-    element = WebDriver.browser.form(:xpath, "/html/body/div[3]/div/div/div/div/div[starts-with(@action, #{xpath})]")
-    # element = WebDriver.browser.div(:class, 'cell-wrapper').form(:action, xpath)
-    # unless text.nil?
-    #   input = element.text_field(type: 'search', name: name)
-    #   input.set(text)
-    # end
-    element.select_list(:id, id).select(value) unless id.nil? && value.nil?
-    element.submit
-  end
-
   def self.click_element(tag, value)
     puts "DEBUG::LOG::Common.click_element\n\tURL: #{WebDriver.browser.url}"
     case tag
