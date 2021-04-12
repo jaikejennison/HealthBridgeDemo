@@ -16,4 +16,16 @@ class Common
       WebDriver.browser.button(:class, value).click!
     end
   end
+
+  def self.check_element(content)
+    puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
+    case content
+    when 'home'
+      puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
+    when 'contact'
+      puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
+    when 'workplace'
+      puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
+    end
+  end
 end

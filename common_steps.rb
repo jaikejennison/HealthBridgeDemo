@@ -32,6 +32,7 @@ end
 
 Then(/^I see the correct (.*) page content$/) do |content|
   puts "Pending #{content} magic"
+  Common.check_element(content)
 end
 
 After do
