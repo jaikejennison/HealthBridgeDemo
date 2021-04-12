@@ -37,7 +37,8 @@ Then(/^I see the correct (.*) page content$/) do |content|
   puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
   case content
   when 'home'
-    Common.check_home
+    derp = Common.check_home
+    puts "DERP: #{derp}"
   when 'contact'
     Common.check_contact
   when 'workplace'
