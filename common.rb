@@ -10,9 +10,9 @@ class Common
   def self.check_element(content)
     case content
     when 'home'
-      puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
       # /html/body/div[2]/div[1]/div[5]/div/div/div/div/div[1]/div/h1/text()
-      puts "#{WebDriver.browser.form(:xpath, "/html/body/div[2]/div[1]/div[5]/div/div/div/div/div[1]/div/h1[contains(@text, collaborate)]").value}"
+      xpath = '/html/body/div[2]/div[1]/div[5]/div/div/div/div/div[1]/div[contains(@text, collaborate)]'
+      puts WebDriver.browser.h1(:xpath, xpath).value.to_s
     when 'contact'
       puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
     when 'workplace'
