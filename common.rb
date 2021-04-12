@@ -11,6 +11,8 @@ class Common
     case content
     when 'home'
       puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
+      # /html/body/div[2]/div[1]/div[5]/div/div/div/div/div[1]/div/h1/text()
+      puts "#{WebDriver.browser.form(:xpath, "/html/body/div[2]/div[1]/div[5]/div/div/div/div/div[1]/div/h1[contains(@text, collaborate)]").value}"
     when 'contact'
       puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
     when 'workplace'
