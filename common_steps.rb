@@ -34,15 +34,16 @@ When(/^I navigate to the (.*) page$/) do |page|
 end
 
 Then(/^I see the correct (.*) page content$/) do |content|
-  puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
   case content
   when 'home'
-    derp = Common.check_home
-    puts "DERP: #{derp}"
+    Common.check_home
+    puts 'This is where we would use a tool like RSPEC'
   when 'contact'
     Common.check_contact
+    puts 'This is where we would use a tool like RSPEC'
   when 'workplace'
     Common.check_workplace
+    puts 'This is where we would use a tool like RSPEC'
   end
 end
 
