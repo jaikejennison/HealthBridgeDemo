@@ -19,14 +19,17 @@ Given(/^I open a new (.*) browser window$/) do |browser|
   end
 end
 
-And(/^I navigate to the (.*) page$/) do |page|
+When(/^I navigate to the (.*) page$/) do |page|
   case page
   when 'home'
     Common.access_page(Config.page[:domain])
+    puts "DEBUG::LOG::Common.access_page\n\tURL: #{WebDriver.browser.url}"
   when 'contact'
     Common.access_page("#{Config.page[:domain]}/#{Config.page[:contact]}")
+    puts "DEBUG::LOG::Common.access_page\n\tURL: #{WebDriver.browser.url}"
   when 'workplace'
     Common.access_page("#{Config.page[:domain]}/#{Config.page[:workplace]}")
+    puts "DEBUG::LOG::Common.access_page\n\tURL: #{WebDriver.browser.url}"
   end
 end
 
