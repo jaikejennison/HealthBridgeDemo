@@ -18,8 +18,8 @@ class Common
       d_class = "#{p_class}__details"
       puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
       puts "\tp_class: #{p_class}\n\tc_class: #{c_class}\n\td_class: #{d_class}"
-      derp = WebDriver.browser.div(class: p_class).div(class: c_class).div(class: d_class).h1.value
-      puts "\tDERP: #{derp}"
+      WebDriver.browser.div(class: p_class).div(class: c_class).div(class: d_class).h1.present?
+      #puts "\tDERP: #{derp}"
     when 'contact'
       puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
     when 'workplace'
