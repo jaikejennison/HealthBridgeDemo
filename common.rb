@@ -14,7 +14,7 @@ class Common
     d_class = "#{p_class}__details"
     element = WebDriver.browser.div(class: p_class).div(class: c_class).div(class: d_class).h1
     element.present?
-    puts "TEXT: #{element.txt}"
+    puts "TEXT: #{element.text}"
   end
 
   def self.check_contact
