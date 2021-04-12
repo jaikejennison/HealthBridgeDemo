@@ -9,15 +9,11 @@ class Common
   end
 
   def self.click_element(tag, value)
-    puts "DEBUG::LOG::Common.click_element\n\tURL: #{WebDriver.browser.url}"
     case tag
     when 'span'
-      # click = WebDriver.browser.span(:class, value)
       WebDriver.browser.span(:class, value).click!
     when 'button'
-      # click = WebDriver.browser.button(:class, value)
       WebDriver.browser.button(:class, value).click!
     end
-    # return click.click if click.exists?
   end
 end

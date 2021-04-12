@@ -20,31 +20,18 @@ Given(/^I open a new (.*) browser window$/) do |browser|
 end
 
 And(/^I navigate to the (.*) page$/) do |page|
-  domain = Config.page[:domain]
-  contact = Config.page[:contact]
-  workplace = Config.page[:workplace]
   case page
   when 'home'
-    Common.access_page(domain)
+    Common.access_page(Config.page[:domain])
   when 'contact'
-    Common.access_page("#{domain}/#{contact}")
+    Common.access_page("#{Config.page[:domain]}/#{Config.page[:contact]}")
   when 'workplace'
-    Common.access_page("#{domain}/#{workplace}")
+    Common.access_page("#{Config.page[:domain]}/#{Config.page[:workplace]}")
   end
 end
 
-Then(/^I see the correct (.*)$/) do |expect|
-  puts "Pending #{expect} magic"
-  case expect
-  when 'page'
-    # result = WebDriver something
-    # expect(result).to be true
-    # expect(result).to be result
-  when 'results'
-    # result = WebDriver something
-    # expect(result).to be true
-    # expect(result).to be result
-  end
+Then(/^I see the correct (.*) page content$/) do |content|
+  puts "Pending #{content} magic"
 end
 
 After do
