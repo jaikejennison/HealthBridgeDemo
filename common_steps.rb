@@ -35,7 +35,14 @@ end
 
 Then(/^I see the correct (.*) page content$/) do |content|
   puts "DEBUG::LOG::Common.check_element\n\tElement: #{content}"
-  Common.check_element(content)
+  case content
+  when 'home'
+    Common.check_home
+  when 'contact'
+    Common.check_contact
+  when 'workplace'
+    Common.check_workplace
+  end
 end
 
 After do
